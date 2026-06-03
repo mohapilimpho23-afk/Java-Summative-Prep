@@ -5,10 +5,24 @@ package summative;
 // ============================
 public abstract class Robot {
     // Declare private fields
+    private String name;
+    private int shieldStrength;
+
 
     // Implement constructor
+    public Robot(String name , int shieldStrength){
+        this.name = name;
+        this.shieldStrength = shieldStrength;
+    }
 
     // Implement getters
+    public String name(){
+        return name;
+    }
+
+    public int getShieldStrength(){
+        return shieldStrength;
+    }
 
     // Implement takeDamage(int amount)
 
