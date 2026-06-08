@@ -25,6 +25,9 @@ public abstract class Robot {
     }
 
     // Implement takeDamage(int amount)
+    public void takeDamage(int amount){
+
+    }
 
     // Helper method for Q3:
     public void repairShields() {
@@ -32,7 +35,7 @@ public abstract class Robot {
         // this.shieldStrength = 5;
     }
 
-    // Declare abstract fireWeapon()
+    public abstract String fireWeapon();
 }
 
 class SniperRobot extends Robot {
@@ -41,6 +44,13 @@ class SniperRobot extends Robot {
     }
 
     // Implement abstract methods
+    @Override
+      void fireWeapon() {
+        return ""
+
+    }
+
+     abstract void shieldStrength();
 }
 
 class TankRobot extends Robot {
