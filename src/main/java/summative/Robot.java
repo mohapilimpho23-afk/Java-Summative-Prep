@@ -26,6 +26,10 @@ public abstract class Robot {
 
     // Implement takeDamage(int amount)
     public void takeDamage(int amount){
+        shieldStrength --;
+        if (shieldStrength < 0){
+            throw new IllegalArgumentException("Strength shield can not go below zero!");
+        }
 
     }
 
@@ -45,12 +49,9 @@ class SniperRobot extends Robot {
 
     // Implement abstract methods
     @Override
-      void fireWeapon() {
-        return ""
-
+    public String fireWeapon(){
+        return "Sniper"  + name() + "fires a high-velocity piercing shot!";
     }
-
-     abstract void shieldStrength();
 }
 
 class TankRobot extends Robot {
@@ -59,4 +60,8 @@ class TankRobot extends Robot {
     }
 
     // Implement abstract methods
+    @Override
+    public  String fireWeapon(){
+        return "Tank"  + name() + "fires an explosive shell!";
+    }
 }
